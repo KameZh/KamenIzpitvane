@@ -1,0 +1,517 @@
+
+samol@Zen MINGW64 ~/Documents/TUES
+$ git clone https://github.com/KameZh/KamenIzpitvane.git
+Cloning into 'KamenIzpitvane'...
+warning: You appear to have cloned an empty repository.
+
+samol@Zen MINGW64 ~/Documents/TUES
+$ git add -A
+fatal: not a git repository (or any of the parent directories): .git
+
+samol@Zen MINGW64 ~/Documents/TUES
+$ cd KamenIzpitvane/
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git add -A
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git commit -m banitsa
+[main (root-commit) 27fac6b] banitsa
+ 3 files changed, 12 insertions(+)
+ create mode 100644 Book.txt
+ create mode 100644 Castel.txt
+ create mode 100644 Rier.txt
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 22 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 574 bytes | 574.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/KameZh/KamenIzpitvane.git
+ * [new branch]      main -> main
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git branch klon1
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git branch klon2
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git checkout klon1\
+> ^C
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git checkout klon1
+Switched to branch 'klon1'
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git add -A
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git commit -m baklava
+[klon1 55d6761] baklava
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git push
+fatal: The current branch klon1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin klon1
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git push --set-upstream origin klon1
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 22 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 395 bytes | 395.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'klon1' on GitHub by visiting:
+remote:      https://github.com/KameZh/KamenIzpitvane/pull/new/klon1
+remote:
+To https://github.com/KameZh/KamenIzpitvane.git
+ * [new branch]      klon1 -> klon1
+branch 'klon1' set up to track 'origin/klon1'.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git checkout klon2
+Switched to branch 'klon2'
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2)
+$ git add -A
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2)
+$ git commit -m halva
+[klon2 e8133ef] halva
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2)
+$ git push
+fatal: The current branch klon2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin klon2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2)
+$ git push --set-upstream origin klon2
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 22 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 466 bytes | 233.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'klon2' on GitHub by visiting:
+remote:      https://github.com/KameZh/KamenIzpitvane/pull/new/klon2
+remote:
+To https://github.com/KameZh/KamenIzpitvane.git
+ * [new branch]      klon2 -> klon2
+branch 'klon2' set up to track 'origin/klon2'.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git merge klon1
+Updating 27fac6b..55d6761
+Fast-forward
+ Book.txt | 2 +-
+ Rier.txt | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/KameZh/KamenIzpitvane.git
+   27fac6b..55d6761  main -> main
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git checkout klon1
+Switched to branch 'klon1'
+Your branch is up to date with 'origin/klon1'.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --[no-]dry-run    dry run
+    -v, --[no-]verbose    be verbose
+
+    -i, --[no-]interactive
+                          interactive picking
+    -p, --[no-]patch      select hunks interactively
+    -e, --[no-]edit       edit current diff and apply
+    -f, --[no-]force      allow adding otherwise ignored files
+    -u, --[no-]update     update tracked files
+    --[no-]renormalize    renormalize EOL of tracked files (implies -u)
+    -N, --[no-]intent-to-add
+                          record only the fact that the path will be added later
+    -A, --[no-]all        add changes from all tracked and untracked files
+    --[no-]ignore-removal ignore paths removed in the working tree (same as --no-all)
+    --[no-]refresh        don't add, only refresh the index
+    --[no-]ignore-errors  just skip files which cannot be added because of errors
+    --[no-]ignore-missing check if - even missing - files are ignored in dry run
+    --[no-]sparse         allow updating entries outside of the sparse-checkout cone
+    --[no-]chmod (+|-)x   override the executable bit of the listed files
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git add -A
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git commit -m halva
+On branch klon1
+Your branch is up to date with 'origin/klon1'.
+
+nothing to commit, working tree clean
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git push
+Everything up-to-date
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ gitk
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ gitk
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git branch
+  klon1
+  klon2
+* main
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git branch -d klon1
+Deleted branch klon1 (was 55d6761).
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git branch klon1
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git checkout lkon1
+error: pathspec 'lkon1' did not match any file(s) known to git
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git checkout klon1
+Switched to branch 'klon1'
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git add -A
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git commit -m palachinka
+On branch klon1
+nothing to commit, working tree clean
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git push
+fatal: The current branch klon1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin klon1
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git push --set-upstream origin klon1
+branch 'klon1' set up to track 'origin/klon1'.
+Everything up-to-date
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git add -A
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git commit -m jovka
+[klon1 c6ec597] jovka
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 22 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 333 bytes | 333.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/KameZh/KamenIzpitvane.git
+   55d6761..c6ec597  klon1 -> klon1
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git add -A
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git commit -m nutela
+[klon1 5f052e8] nutela
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 22 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 334 bytes | 334.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/KameZh/KamenIzpitvane.git
+   c6ec597..5f052e8  klon1 -> klon1
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 859 bytes | 214.00 KiB/s, done.
+From https://github.com/KameZh/KamenIzpitvane
+ * branch            main       -> FETCH_HEAD
+   55d6761..9b11155  main       -> origin/main
+Updating 55d6761..9b11155
+Fast-forward
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git checkout klon2
+Switched to branch 'klon2'
+Your branch is up to date with 'origin/klon2'.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2)
+$ git merge main
+Auto-merging Book.txt
+CONFLICT (content): Merge conflict in Book.txt
+Auto-merging Rier.txt
+CONFLICT (content): Merge conflict in Rier.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2|MERGING)
+$ git checkout --thiers Book.txt
+error: unknown option `thiers'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --[no-]guess          second guess 'git checkout <no-such-branch>' (default)
+    --[no-]overlay        use overlay mode (default)
+    -q, --[no-]quiet      suppress progress reporting
+    --[no-]recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --[no-]progress       force progress reporting
+    -m, --[no-]merge      perform a 3-way merge with the new branch
+    --[no-]conflict <style>
+                          conflict style (merge, diff3, or zdiff3)
+    -d, --[no-]detach     detach HEAD at named commit
+    -t, --[no-]track[=(direct|inherit)]
+                          set branch tracking configuration
+    -f, --[no-]force      force checkout (throw away local modifications)
+    --[no-]orphan <new-branch>
+                          new unborn branch
+    --[no-]overwrite-ignore
+                          update ignored files (default)
+    --[no-]ignore-other-worktrees
+                          do not check if another worktree is using this branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --[no-]patch      select hunks interactively
+    --[no-]ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2|MERGING)
+$ git checkout --theirs Book.txt
+Updated 1 path from the index
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2|MERGING)
+$ git checkout --ours Rier.txt
+Updated 1 path from the index
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2|MERGING)
+$ git add -A
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2|MERGING)
+$ git commit -m musaka
+[klon2 0887a8f] musaka
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 22 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 319 bytes | 159.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/KameZh/KamenIzpitvane.git
+   e8133ef..0887a8f  klon2 -> klon2
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (klon2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git branch PromeniVRier
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git checkout PromeniVRier
+M       Rier.txt
+Switched to branch 'PromeniVRier'
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (PromeniVRier)
+$ git checkout main
+M       Rier.txt
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git checkout PromeniVRier
+M       Rier.txt
+Switched to branch 'PromeniVRier'
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (PromeniVRier)
+$ git checkout main
+M       Rier.txt
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git add -A
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git commit -m kokoshka
+[main 31e9f2f] kokoshka
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git push
+To https://github.com/KameZh/KamenIzpitvane.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/KameZh/KamenIzpitvane.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 858 bytes | 143.00 KiB/s, done.
+From https://github.com/KameZh/KamenIzpitvane
+   9b11155..f9e8df5  main       -> origin/main
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/samol/Documents/TUES/KamenIzpitvane/.git/MERGE_MSG to DOS format...
+dos2unix: converting file C:/Users/samol/Documents/TUES/KamenIzpitvane/.git/MERGE_MSG to Unix format...
+Merge made by the 'ort' strategy.
+ Castel.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (main)
+$ git checkout PromeniVRier
+Switched to branch 'PromeniVRier'
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (PromeniVRier)
+$ git add -A
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (PromeniVRier)
+$ git commit -m Petel
+[PromeniVRier e758d54] Petel
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (PromeniVRier)
+$ git push
+fatal: The current branch PromeniVRier has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin PromeniVRier
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (PromeniVRier)
+$ git push --set-upstream origin PromeniVRier
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 22 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'PromeniVRier' on GitHub by visiting:
+remote:      https://github.com/KameZh/KamenIzpitvane/pull/new/PromeniVRier
+remote:
+To https://github.com/KameZh/KamenIzpitvane.git
+ * [new branch]      PromeniVRier -> PromeniVRier
+branch 'PromeniVRier' set up to track 'origin/PromeniVRier'.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (PromeniVRier)
+$ git pull origin main
+From https://github.com/KameZh/KamenIzpitvane
+ * branch            main       -> FETCH_HEAD
+Auto-merging Rier.txt
+CONFLICT (content): Merge conflict in Rier.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (PromeniVRier|MERGING)
+$ git checkout --ours Rier.txt
+Updated 1 path from the index
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (PromeniVRier|MERGING)
+$ git add -A
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (PromeniVRier|MERGING)
+$ git commit -m kon
+[PromeniVRier 8d71d67] kon
+
+samol@Zen MINGW64 ~/Documents/TUES/KamenIzpitvane (PromeniVRier)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 22 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 265 bytes | 265.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/KameZh/KamenIzpitvane.git
+   e758d54..8d71d67  PromeniVRier -> PromeniVRier
